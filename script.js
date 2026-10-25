@@ -1,0 +1,28 @@
+function isPositive(number) {
+    return number > 0;
+}
+
+function isNegative(number) {
+    return number < 0;
+}
+
+function isZero(number) {
+    return number === 0;
+}
+
+function isEven(number) {
+    return number % 2 === 0;
+}
+
+function describeNumber(number) {
+    return {
+        number: number,
+        positive: isPositive(number),
+        negative: isNegative(number),
+        zero: isZero(number),
+        even: isEven(number),
+        odd: !isEven(number)
+    }
+}
+
+console.log(describeNumber(3));
